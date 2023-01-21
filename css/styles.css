@@ -1,0 +1,206 @@
+:root {
+    /* Colors */
+    --brand-text: #2E2F42;
+    --subtle-text: #434455;
+    --primary-brand: #404BBF;
+    --pressed-state: #4D5AE5;
+    --light-mode-backgrounds-dialogs: #F4F4FD;
+    --accent-color-hairlines: #E7E9FC;
+    --font-family:inherit;
+}
+
+
+body {
+background-color: #ffffff;
+color: var(--brand-text);
+font-family: Roboto, sans-serif ;
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+}
+
+.stealth-text {
+    visibility: hidden;
+}
+
+
+
+                            /* STUDIO(INDEX).HTML */
+
+
+
+
+/* Lists-style */
+
+.nav-list,
+.features-list,
+.jobs-list,
+.team-list {
+    list-style-type: none;
+}
+
+/* Logo */
+
+.logo {
+    color: var(--pressed-state);
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+}
+.secon-logo {
+    color: var(--brand-text);
+}
+
+.footer-logo {
+    color: var(--light-mode-backgrounds-dialogs);
+}
+/* Navigation */
+
+
+.nav-bt {
+    color: var(--brand-text);
+    text-decoration: none;
+}
+.nav-list .nav-bt.current {
+    color: var(--primary-brand);
+}
+
+.contacts {
+    color : var(--subtle-text);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav-bt:hover, .contacts:hover {
+    color: var(--primary-brand);
+}
+
+.nav-bt:focus, .contacts:focus {
+    color: var(--primary-brand);
+}
+
+
+
+/* Hero section */
+
+.hero {
+    background-color: var(--brand-text);
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    
+}
+.order-bt{
+    background-color: var(--pressed-state);
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    align-items: center;
+    cursor: pointer;
+}
+.order-bt:hover, .order-bt:focus {
+    background-color: var(--pressed-state);
+    }
+
+.order-bt:active {
+    background-color: var(--primary-brand);
+}
+
+/* Features Section */
+
+
+
+
+.features-title {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.features-item {
+    color: var(--subtle-text);
+    font-weight: 400;
+}
+
+/* Jobs section */
+
+.jobs-title, .team-title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Team section */
+
+.team-section {
+    background-color:  var(--light-mode-backgrounds-dialogs);
+}
+
+.team-member-tittle {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.team-member-item {
+    font-weight: 400;
+}
+
+.team-car-backgrnd {
+    background-color: #ffffff   ;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--brand-text);
+    color: var(--light-mode-backgrounds-dialogs);
+    font-weight: 400;
+    }
+
+
+
+    /* PORTFOLIO.HTML */
+
+
+    /* Filters */
+
+    .filters, .works-list {
+        list-style-type: none;
+    }
+
+    
+    .btn-filt {
+        background-color: var(--accent-color-hairlines);
+        color: var(--pressed-state);
+        font-family: Roboto, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        border: 1px solid #E7E9FC;
+        border-radius: 4px;
+    }
+    .btn-filt:hover, .btn-filt:focus {
+        background-color: var(--pressed-state);
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    /*  Work experience */
+
+    .list-title {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .list-subtitle {
+        font-weight: 400;
+        color: var(--subtle-text);
+    }
