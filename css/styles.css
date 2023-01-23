@@ -7,6 +7,9 @@
     --light-mode-backgrounds-dialogs: #F4F4FD;
     --accent-color-hairlines: #E7E9FC;
     --font-family:inherit;
+    /* Others */
+    --margin-indent: 24px;
+    --list-items-sum: 3;
 }
 
 
@@ -20,15 +23,28 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 }
 
-.stealth-text {
-    visibility: hidden;
+/* Reset */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   margin: 0; 
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-
-                            /* STUDIO(INDEX).HTML */
-
-
+button {
+    cursor: pointer;
+}
+/*--------------------*/
 
 
 /* Lists-style */
@@ -38,11 +54,73 @@ letter-spacing: 0.02em;
 .jobs-list,
 .team-list {
     list-style-type: none;
+
 }
+/*--------------------*/
+
+
+/* Visually-hidden */
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/*--------------------*/
+
+/* GRID */
+
+.grid-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--margin-indent);
+
+}
+
+.grid-item {
+    flex-basis: calc((var(--margin-indent)*(var(--list-items-sum) - 1)))/ var(--list-items-sum);
+}
+
+/*--------------------*/
+
+
+.container  {
+   max-width: 1158px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+
+
+                            /* STUDIO(INDEX).HTML */
+
+
+
+
+
+/*--------------------*/
+
+
 
 /* Logo */
 
 .logo {
+    min-width: 115px;
     color: var(--pressed-state);
     font-family: Raleway, sans-serif;
     font-weight: 800;
@@ -50,6 +128,10 @@ letter-spacing: 0.02em;
     line-height: 1.33;
     text-decoration: none;
     letter-spacing: 0.03em;
+    padding-top: 24px;
+    padding-bottom: 24px ;
+    margin-right: 77px;
+
 }
 .secon-logo {
     color: var(--brand-text);
@@ -58,14 +140,48 @@ letter-spacing: 0.02em;
 .footer-logo {
     color: var(--light-mode-backgrounds-dialogs);
 }
+/*--------------------*/
+
+
 /* Navigation */
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+
+
+
+.auth-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.auth-list-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.auth-list .auth-list-item + .auth-list-item {
+    margin-left: 40px;
+}
 
 .nav-bt {
     color: var(--brand-text);
     text-decoration: none;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
 }
-.nav-list .nav-bt.current {
+.nav-list .nav-bt.current , .auth-list  {
     color: var(--primary-brand);
 }
 
@@ -82,7 +198,7 @@ letter-spacing: 0.02em;
 .nav-bt:focus, .contacts:focus {
     color: var(--primary-brand);
 }
-
+/*--------------------*/
 
 
 /* Hero section */
@@ -93,8 +209,17 @@ letter-spacing: 0.02em;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
+    padding-top: 192px;
+    padding-bottom: 192px;
+
     
 }
+
+h1 {
+    padding-top: 192px;
+    margin-bottom: 48px;
+}
+
 .order-bt{
     background-color: var(--pressed-state);
     color: #ffffff;
@@ -104,7 +229,13 @@ letter-spacing: 0.02em;
     letter-spacing: 0.04em;
     align-items: center;
     cursor: pointer;
+    padding: 16px 32px;
+    margin-bottom: 192;
+
 }
+
+
+
 .order-bt:hover, .order-bt:focus {
     background-color: var(--pressed-state);
     }
@@ -112,6 +243,9 @@ letter-spacing: 0.02em;
 .order-bt:active {
     background-color: var(--primary-brand);
 }
+/*--------------------*/
+
+
 
 /* Features Section */
 
@@ -121,12 +255,26 @@ letter-spacing: 0.02em;
 .features-title {
     font-size: 20px;
     line-height: 1.2;
+    margin-bottom: 8px;
 }
 
-.features-item {
+.features-text {
     color: var(--subtle-text);
     font-weight: 400;
 }
+
+
+.features-list-item {
+    max-width: 264px;
+    --list-items-sum: 4;
+}
+
+
+
+/*--------------------*/
+
+
+
 
 /* Jobs section */
 
@@ -137,24 +285,53 @@ letter-spacing: 0.02em;
     text-transform: capitalize;
 }
 
+.jobs-title {
+    margin-bottom: 72px;
+}
+
+/*--------------------*/
+
+
+
+
 /* Team section */
 
 .team-section {
     background-color:  var(--light-mode-backgrounds-dialogs);
+    padding-bottom: 64px;
+}
+
+.team-title {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.team-car-item {
+    background-color: #ffffff;
+    text-align: center;
+    --list-items-sum: 4;
+}
+ 
+.team-car-item img {
+    margin-bottom: 32px;
 }
 
 .team-member-tittle {
     font-size: 20px;
     line-height: 1.2;
+    margin-bottom: 8px;
 }
 
 .team-member-item {
+    padding-bottom: 32px;
     font-weight: 400;
 }
 
-.team-car-backgrnd {
-    background-color: #ffffff   ;
-}
+
+/*--------------------*/
+
+
+
 
 /* Footer */
 
@@ -162,7 +339,22 @@ letter-spacing: 0.02em;
     background-color: var(--brand-text);
     color: var(--light-mode-backgrounds-dialogs);
     font-weight: 400;
+    padding-top: 100px;
+    padding-bottom: 100px;
     }
+
+.ftr-logo-position {
+    display: block;
+    margin-bottom: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.footer-text {
+    max-width: 264px;
+}
+/*--------------------*/
 
 
 
@@ -192,6 +384,9 @@ letter-spacing: 0.02em;
         color: #ffffff;
         cursor: pointer;
     }
+    /*--------------------*/
+
+
 
     /*  Work experience */
 
