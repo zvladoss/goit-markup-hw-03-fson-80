@@ -152,10 +152,13 @@ section {
 
 /* Navigation */
 
+header {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .header-container {
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 
@@ -221,15 +224,20 @@ section {
     padding-bottom: 192px;
 }
 
-h1 {
-    padding-top: 192px;
+.hero-title {
+    width: 492px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
     margin-bottom: 48px;
 }
 
 .order-bt{
     background-color: var(--pressed-state);
     color: #ffffff;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.04em;
@@ -258,7 +266,6 @@ h1 {
 
 
 
-
 .features-title {
     font-size: 20px;
     line-height: 1.2;
@@ -284,6 +291,10 @@ h1 {
 
 
 /* Jobs section */
+
+.jobs-section {
+    padding-top: 0;
+}
 
 .jobs-title, .team-title {
     font-size: 36px;
@@ -331,7 +342,6 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 8px;
 }
 .team-member-tittle {
     font-size: 20px;
@@ -362,9 +372,7 @@ h1 {
 .ftr-logo-position {
     display: block;
     margin-bottom: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    padding: 0;
 }
 
 .footer-text {
@@ -379,16 +387,13 @@ h1 {
 
     /* Filters */
 
-.filters-container {
-    padding-top: 96px;
-    padding-bottom: 72px;
-}
 
 .filters, .works-list {
     list-style-type: none;
 }
 
 .filters {
+    margin-bottom: 72px;
     display:flex ;
     justify-content: center;
     gap: 24px;
@@ -417,7 +422,7 @@ h1 {
 
     /*  Works experience */
 .works-senction {
-    padding-top: 0;
+    padding-top: 96px;
 }
     
 .works-list {
@@ -431,24 +436,25 @@ h1 {
     flex-direction: column;
     justify-content: center;        
     align-items: flex-start;
-    padding: 0 16px;
+    padding: 32px 16px;
     gap: 8px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    border-left:0.5px solid #F4F4FD ;
+    border-right:0.5px solid #F4F4FD ;
+    border-bottom:0.5px solid #F4F4FD ;
 }
     
 .works-list-item {
     width: 360px;
-    padding-bottom: 32px;
+    /* padding-bottom: 32px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08) ;
-    border: 0.5px solid #F4F4FD;
+    border: 0.5px solid #F4F4FD; */
 }
 
 .works-list-item:hover, .works-list-item:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.works-list-item > img {
-    margin-bottom: 32px;
-}
 
 .list-title {
     font-size: 20px;
